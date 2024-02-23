@@ -1,0 +1,126 @@
+/* Sets the basic styling for the entire webpage */
+body {
+    font-family: 'Montserrat Alternates', sans-serif; /* Specifies the font family for the text */
+    margin: 0; /* Removes the default margin around the body */
+    padding: 0; /* Removes the default padding inside the body */
+    background-color: #d1d1d1; /* Sets the background color */
+  }
+
+  /* Styling for elements of the Montserrat Alternates Font-Family */
+
+  .montserrat-alternates-light {    
+    font-weight: 300; /* Sets the font weight to light (300) */
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-regular {
+    font-weight: 400; /* Sets the font weight to normal (400), which is the default weight */
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-extrabold {
+    font-weight: 800; /* Sets the font weight to extra bold (800) for emphasis */
+    font-style: normal;
+  }
+
+  /* Styling for the header section of the webpage */
+  header {
+    padding: 1em; /* Adds space around the content inside the header */
+    text-align: center; /* Centers the text inside the header */
+  }
+  
+  /* Styling for the navigation menu */
+  nav {
+    padding: 1em; /* Adds space around the content inside the navigation */
+    text-align: right; /* Aligns the menu buttons to the right */
+  }
+  
+  /* Styling for the main content area */
+  main {
+    display: flex; /* Enables flexbox layout, providing a flexible and efficient way to layout, align, and distribute space among items */
+    justify-content: center; /* Centers the flex items horizontally */
+    align-items: center; /* Centers the flex items vertically */
+    padding: 0; /* Adds more space around the content inside the main area */
+    margin: 0;
+  }
+
+  #spin-button {
+    display: flex;
+    justify-content:center;
+    align-items: left;
+    padding-bottom: 100px;
+  }
+  #activity-input {
+    margin-right: 20px;
+  }
+  #interval-input {
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+  #about {
+    background-color: #ffffff;
+    color: #666666;
+    height: 50px;
+    width: 180px;
+    font-family:'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #spin {
+    background-color: #666666;
+    color: #ffffff;
+    height: 50px;
+    width: 180px;
+    font-family:'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #sound {
+    background-color: #ffffff;
+    color: #666666;
+    height: 50px;
+    width: 80px;
+    font-family:'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #about:hover {
+    background-color: #e77ed9;
+    color: #ffffff;    
+  }
+  #spin:hover {
+    background-color: #e77ed9;    
+  }
+  #sound:hover {
+    background-color: #e77ed9;
+    color: #ffffff;  
+  }
+  
