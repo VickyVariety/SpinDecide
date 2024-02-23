@@ -53,10 +53,45 @@ body {
   #activity-input {
     margin-right: 20px;
   }
-  #interval-input {
+  #duration-input {
     display: inline-block;
     justify-content: space-between;
   }
+  .input-row {
+    margin-bottom: 15px;
+  }
+  input[type="text"] {
+    border: none; /* Removes the border line */
+    border-radius: 10px; /* Adds rounded corners */
+    height: 40px; /* Adjusts the height of the input field */
+    width: 200px; /* Adjusts the width of the input field */
+    padding: 0 10px; /* Adds some padding inside the field for the text */
+    margin-bottom: 20px; /* Adds more space between each row */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    outline: none; /* Removes the outline that appears when the input field is focused */
+  }
+  
+  /* Style to indicate focus on the input field when the user clicks in it */
+  input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0,105,217,0.5); /* Adds a more prominent shadow to indicate focus */
+  }  
+  .number-box {
+    display: inline-block;
+    font-family:'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 6px;
+    color: #000000;
+    text-align: center;
+    margin-right: 8px;
+}
+
+  .color-1 { background-color: #FF5733; }
+  .color-2 { background-color: #33FF57; }
+  .color-3 { background-color: #3357FF; }
+  .color-4 { background-color: #F033FF; }
 
   #about {
     background-color: #ffffff;
