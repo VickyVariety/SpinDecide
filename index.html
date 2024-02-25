@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <h1>SpinDecide</h1>
         <nav>
             <button id="about" aria-label="About">About</button>
             <button id="sound" aria-label="Toggle sound">
@@ -44,7 +45,8 @@
                             <span class="number-box color-4">4</span>
                             <input type="text" id="activity-4" name="activity-4">
                         </div>
-                    </form>
+                        <button id="add">ADD</button>
+                    </form>                    
                 </section>
             
             <!-- Add Durations -->       
@@ -67,6 +69,7 @@
                         <span class="number-box color-4">4</span>
                         <input type="text" id="duration-4" name="duration-4">
                     </div>
+                    <button id="add">ADD</button>
                 </form>
             </section>
         </aside>
@@ -74,21 +77,36 @@
 <!-- Section containing the spinners -->
 
         <!-- Button to activate the spinner -->
-        <div id="spin-button">
-            <button id="spin">SPIN</button>
-        </div>
+        <div class="main-content">
+            <div class="spin-button-container">
+              <button id="spin">SPIN</button>
+            </div>
         <section id="spinner">
             <!--Activity Spinner-->
             <div id="activity-spinner">
-            <!-- The spinner for activities will go here -->
+                <!-- Spinner segments -->
+                <div class="spinner-container">
+                <div class="spinner-segment red" data-activity="activity1"></div>
+                <div class="spinner-segment green" data-activity="activity2"></div>
+                <div class="spinner-segment blue" data-activity="activity3"></div>
+                <div class="spinner-segment yellow" data-activity="activity4"></div>
+                </div>
             </div>
 
             <!--Duraction Spinner-->
             <div id="duration-spinner">
-            <!-- The spinner for durations will go here -->
+                <!-- Spinner segments -->
+                <div class="spinner-container">
+                    <div class="spinner-segment red" data-duration="duration1"></div>
+                    <div class="spinner-segment green" data-duration="duration2"></div>
+                    <div class="spinner-segment blue" data-duration="duration3"></div>
+                    <div class="spinner-segment yellow" data-duration="duration4"></div>
+                    </div>
             </div>
         </section>
+            </div>
         </div>
+    </div>
     </main>
 <!-- Footer-->
     <footer>
