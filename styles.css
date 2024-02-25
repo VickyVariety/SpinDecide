@@ -47,23 +47,30 @@ main {
 .main-content {
   display: flex;
   flex-direction: column; /* Stacks the elements vertically */
-  align-items: center; /* Center the elements horizontally */
-  justify-content: flex-start; /* Make the content start from the top */
-  padding: 20px;
+  align-items: center; /* Center the elements horizontally */  
 }
 
 /* Button container styling */
 .spin-button-container {
-  margin-top: 50px; /* Adds space above the container */
+  margin-bottom: 2em /* Adds space above the container */
 }
 
 /* Spinner styling */
+
+#spinner {
+  display: flex;
+  flex-direction: row; /* Stacks the spinners horizontally */
+  justify-content: center; /* Center the spinners horizontally */
+  gap: 2em; /* Adds space between the spinners */
+}
+
 .spinner-container {
-  margin-top: 2em;
+  margin: 0;
   width: 22em;
   height: 22em;
   transform: rotate(-135deg);
-}
+  position: relative;
+  }
 
 .spinner-segment {
   position: absolute;
