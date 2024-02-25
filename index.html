@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Ensures the site is mobile-responsive -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Optimizes font loading by preconnecting to Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- Allows crossorigin font loading for better performance -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;800&display=swap" rel="stylesheet"><!-- Imports the Montserrat Alternates font with specified weights -->
-    <title>SpinDecide</title><!-- Sets the title of the webpage -->
-    <link rel="stylesheet" href="styles.css"><!-- Links to an external CSS file for styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;800&display=swap" rel="stylesheet">
+    <title>SpinDecide</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b88d50a651.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <!-- Navigation bar for the site -->
         <nav>
-            <!-- About Button-->
-            <button id="about">About</button>
-            <!-- Sound On/Off Button-->
-            <button id="sound">
-            <i class="fa-solid fa-volume-off"></i>
+            <button id="about" aria-label="About">About</button>
+            <button id="sound" aria-label="Toggle sound">
+                <i class="fa-solid fa-volume-off"></i>
             </button>
         </nav>
     </header>
 
-<!-- Main content of the webpage -->
+<!-- Main content -->
     <main>
-        <!-- Add Activities -->        
-        <section id="activity-input">
-            <h2>Add Activities</h2>
-            <form id="add-activities">
-                <div class="input-row">
-                    <span class="number-box color-1">1</span>
-                    <input type="text" id="activity-1" name="activity-1">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-2">2</span>
-                    <input type="text" id="activity-2" name="activity-2">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-3">3</span>
-                    <input type="text" id="activity-3" name="activity-3">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-4">4</span>
-                    <input type="text" id="activity-4" name="activity-4">
-                </div>
-            </form>
-        </section>
-        <!-- Add Durations -->       
-        <section id="duration-input">
-            <h2>Add Durations</h2>
-            <form id="add-durations">
-                <div class="input-row">
-                    <span class="number-box color-1">1</span>
-                    <input type="text" id="duration-1" name="duration-1">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-2">2</span>
-                    <input type="text" id="duration-2" name="duration-2">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-3">3</span>
-                    <input type="text" id="duration-3" name="duration-3">
-                </div>
-                <div class="input-row">
-                    <span class="number-box color-4">4</span>
-                    <input type="text" id="duration-4" name="duration-4">
-                </div>
-            </form>
-        </section>
-
+        <div class="container">
+            <aside class="sidebar">
+                <!-- Add Activities -->        
+                <section id="activity-input">
+                    <h2>Add Activities</h2>
+                    <form id="add-activities">
+                        <div class="input-row">
+                            <span class="number-box color-1">1</span>
+                            <input type="text" id="activity-1" name="activity-1">
+                        </div>
+                        <div class="input-row">
+                            <span class="number-box color-2">2</span>
+                            <input type="text" id="activity-2" name="activity-2">
+                        </div>
+                        <div class="input-row">
+                            <span class="number-box color-3">3</span>
+                            <input type="text" id="activity-3" name="activity-3">
+                        </div>
+                        <div class="input-row">
+                            <span class="number-box color-4">4</span>
+                            <input type="text" id="activity-4" name="activity-4">
+                        </div>
+                    </form>
+                </section>
+            
+            <!-- Add Durations -->       
+            <section id="duration-input">
+                <h2>Add Durations</h2>
+                <form id="add-durations">
+                    <div class="input-row">
+                        <span class="number-box color-1">1</span>
+                        <input type="text" id="duration-1" name="duration-1">
+                    </div>
+                    <div class="input-row">
+                        <span class="number-box color-2">2</span>
+                        <input type="text" id="duration-2" name="duration-2">
+                    </div>
+                    <div class="input-row">
+                        <span class="number-box color-3">3</span>
+                        <input type="text" id="duration-3" name="duration-3">
+                    </div>
+                    <div class="input-row">
+                        <span class="number-box color-4">4</span>
+                        <input type="text" id="duration-4" name="duration-4">
+                    </div>
+                </form>
+            </section>
+        </aside>
+        
 <!-- Section containing the spinners -->
 
         <!-- Button to activate the spinner -->
         <div id="spin-button">
-        <button id="spin">SPIN</button>
+            <button id="spin">SPIN</button>
         </div>
         <section id="spinner">
             <!--Activity Spinner-->
@@ -83,13 +83,14 @@
             <!-- The spinner for activities will go here -->
             </div>
 
-            <!--Intervals Spinner-->
-            <div id="interval-spinner">
-            <!-- The spinner for intervals will go here -->
+            <!--Duraction Spinner-->
+            <div id="duration-spinner">
+            <!-- The spinner for durations will go here -->
             </div>
         </section>
+        </div>
     </main>
-<!-- Footer of the webpage -->
+<!-- Footer-->
     <footer>
         <p>SpinDecide &copy; 2024 VickyVariety</p>
     </footer>
