@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;800&display=swap" rel="stylesheet">
-    <title>SpinDecide</title>
+    <title>SpinDecide - Activity Spinner</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b88d50a651.js" crossorigin="anonymous"></script>
 </head>
@@ -31,19 +31,19 @@
                     <form id="add-activities">
                         <div class="input-row">
                             <span class="number-box color-1">1</span>
-                            <input type="text" id="activity-1" name="activity-1">
+                            <input type="text" id="activity-1" name="activity-1" maxlength="10" size="10">
                         </div>
                         <div class="input-row">
                             <span class="number-box color-2">2</span>
-                            <input type="text" id="activity-2" name="activity-2">
+                            <input type="text" id="activity-2" name="activity-2" maxlength="10" size="10">
                         </div>
                         <div class="input-row">
                             <span class="number-box color-3">3</span>
-                            <input type="text" id="activity-3" name="activity-3">
+                            <input type="text" id="activity-3" name="activity-3" maxlength="10" size="10">
                         </div>
                         <div class="input-row">
                             <span class="number-box color-4">4</span>
-                            <input type="text" id="activity-4" name="activity-4">
+                            <input type="text" id="activity-4" name="activity-4" maxlength="10" size="10">
                         </div>
                         <button id="add">ADD</button>
                     </form>                    
@@ -55,19 +55,19 @@
                 <form id="add-durations">
                     <div class="input-row">
                         <span class="number-box color-1">1</span>
-                        <input type="text" id="duration-1" name="duration-1">
+                        <input type="text" id="duration-1" name="duration-1" maxlength="10" size="10">
                     </div>
                     <div class="input-row">
                         <span class="number-box color-2">2</span>
-                        <input type="text" id="duration-2" name="duration-2">
+                        <input type="text" id="duration-2" name="duration-2" maxlength="10" size="10">
                     </div>
                     <div class="input-row">
                         <span class="number-box color-3">3</span>
-                        <input type="text" id="duration-3" name="duration-3">
+                        <input type="text" id="duration-3" name="duration-3" maxlength="10" size="10">
                     </div>
                     <div class="input-row">
                         <span class="number-box color-4">4</span>
-                        <input type="text" id="duration-4" name="duration-4">
+                        <input type="text" id="duration-4" name="duration-4" maxlength="10" size="10">
                     </div>
                     <button id="add">ADD</button>
                 </form>
@@ -86,10 +86,16 @@
             <div id="activity-spinner">
                 <!-- Spinner segments -->
                 <div class="spinner-container">
-                <div class="spinner-segment red" data-activity="activity1"></div>
-                <div class="spinner-segment green" data-activity="activity2"></div>
-                <div class="spinner-segment blue" data-activity="activity3"></div>
-                <div class="spinner-segment yellow" data-activity="activity4"></div>
+                    <div class="spinner-segment red" data-activity="activity1">
+                    </div>
+                    <div class="spinner-segment green" data-activity="activity2"></div>
+                    <div class="spinner-segment blue" data-activity="activity3"></div>
+                    <div class="spinner-segment yellow" data-activity="activity4"></div>
+                </div>
+                <div class="output">
+                    <form id="activity-output">
+                        <input type="text" id="activity-result" name="activity-result" readonly>
+                    </form>
                 </div>
             </div>
 
@@ -97,10 +103,15 @@
             <div id="duration-spinner">
                 <!-- Spinner segments -->
                 <div class="spinner-container">
-                    <div class="spinner-segment red" data-duration="duration1"></div>
-                    <div class="spinner-segment green" data-duration="duration2"></div>
-                    <div class="spinner-segment blue" data-duration="duration3"></div>
-                    <div class="spinner-segment yellow" data-duration="duration4"></div>
+                        <div class="spinner-segment red" data-duration="duration1"></div>
+                        <div class="spinner-segment green" data-duration="duration2"></div>
+                        <div class="spinner-segment blue" data-duration="duration3"></div>
+                        <div class="spinner-segment yellow" data-duration="duration4"></div>
+                    </div>
+                    <div class="output">
+                        <form id="duration-output">
+                            <input type="text" id="duration-result" name="duration-result" readonly>
+                        </form>
                     </div>
             </div>
         </section>

@@ -6,17 +6,24 @@ body {
   background-color: #d1d1d1;  
 }
 
+h1 {
+  font-size: 2.5em;
+  color:#ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 25px #06b3b3, 0 0 5px #046969;  
+}
+
+
 /* Styles the header including the navigation bar */
 header {
-  padding: 0.1em;
-  height: 1em;
+  height: 2em;
   text-align: center;
 }
 
 /* Aligns navigation items to the right */
 nav {
-  padding-right: 1em;
   text-align: right;
+  margin-right: 2em;  
+  margin-top: -4.5em;
 }
 
 /* Establishes a grid layout for the main content area */
@@ -40,14 +47,15 @@ main {
 
 /* Sidebar styling, uses the grid area named 'sidebar' */
 .sidebar {
-  padding: 20px;
+  padding: 2em;
 }
 
 /* Main content styling */
 .main-content {
   display: flex;
   flex-direction: column; /* Stacks the elements vertically */
-  align-items: center; /* Center the elements horizontally */  
+  align-items: center; /* Center the elements horizontally */
+  margin-top: 4em;  
 }
 
 /* Button container styling */
@@ -70,6 +78,8 @@ main {
   height: 22em;
   transform: rotate(-135deg);
   position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
 
 .spinner-segment {
@@ -108,13 +118,14 @@ main {
   border: none;
   border-radius: 0.6em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 0.1s ease, transform 0.3s ease;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #about:hover {
   background-color: #e77ed9;
-  color: #ffffff;    
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2), 0 0 25px #e77ed9, 0 0 5px #af40a0;     
 }
 
 #sound {
@@ -122,18 +133,20 @@ main {
   color: #666666;
   height: 2em;
   width: 2em;
+  text-align: center;
   font-family:'Montserrat Alternates', sans-serif;
   font-size: 1.5em;
   border: none;
   border-radius: 0.6em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 0.1s ease, transform 0.3s ease;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #sound:hover {
   background-color: #e77ed9;
-  color: #ffffff;  
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2), 0 0 25px #e77ed9, 0 0 5px #af40a0;   
 }
 
 #spin {
@@ -148,13 +161,15 @@ main {
   text-align: center;
   border: none;
   border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  cursor: pointer;  
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 #spin:hover {
-  background-color: #e77ed9;    
+  background-color: #e77ed9;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2), 0 0 25px #e77ed9, 0 0 5px #af40a0; 
 }
 
 #add {
@@ -169,12 +184,13 @@ main {
   border: none;
   border-radius: 0.6em;
   cursor: pointer;
-  transition: background-color 0.3s;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: color 0.1s ease, transform 0.3s ease;
 }
 
 #add:hover {
-  background-color: #e77ed9;    
+  background-color: #e77ed9;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2), 0 0 25px #e77ed9, 0 0 5px #af40a0;     
 }
 
 /* Adds margin to the bottom of each input row for spacing */
@@ -212,9 +228,18 @@ input[type="text"]:focus {
   margin-right: 8px;
 }
 
+.output {
+  display: flex;
+  padding-top: 2em;
+  margin-left: 6.5em;
+  justify-self: center;
+}
+
 footer {
   font-size: 0.6em;
-  text-align: center;  
+  text-align: center;
+  height: 0.3em;
+  margin-top: -3em;  
 }
 
 /* Colors for each number box */
