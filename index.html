@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;800&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
                 <!-- Add Activities -->        
                 <section id="activity-input">
                     <h2>Add Activities</h2>
-                    <form id="add-activities">
+                    <form id="add-activities-input">
                         <div class="input-row">
                             <span class="number-box color-1">1</span>
                             <input type="text" id="activity-1" name="activity-1" maxlength="10" size="10">
@@ -52,7 +52,7 @@
             <!-- Add Durations -->       
             <section id="duration-input">
                 <h2>Add Durations</h2>
-                <form id="add-durations">
+                <form id="add-durations-input">
                     <div class="input-row">
                         <span class="number-box color-1">1</span>
                         <input type="text" id="duration-1" name="duration-1" maxlength="10" size="10">
@@ -81,17 +81,30 @@
             <div class="spin-button-container">
               <button id="spin">SPIN</button>
             </div>
-        <section id="spinner">
+        <section id="spinners">
+            
             <!--Activity Spinner-->
+            
             <div id="activity-spinner">
                 <!-- Spinner segments -->
                 <div class="spinner-container">
-                    <div class="spinner-segment red" data-activity="activity1">
-                    </div>
-                    <div class="spinner-segment green" data-activity="activity2"></div>
-                    <div class="spinner-segment blue" data-activity="activity3"></div>
-                    <div class="spinner-segment yellow" data-activity="activity4"></div>
+                    <canvas id="spinner-a" width="352" height="352">
+                        <div class="spinner-segment red" data-activity="activity1"></div>
+                        <div class="spinner-segment green" data-activity="activity2"></div>
+                        <div class="spinner-segment blue" data-activity="activity3"></div>
+                        <div class="spinner-segment yellow" data-activity="activity4"></div>
+                    </canvas>
                 </div>
+
+                <!-- Activity Segment Input-fields -->
+                <div class="inputs-overlay">
+                    <input type="text" class="spinner-input" id="activity-input1" placeholder="Activity 1" style="top: 22.5%; left: 45%;" readonly>
+                    <input type="text" class="spinner-input" id="activity-input2" placeholder="Activity 2" style="top: 33.5%; left: 50%;" readonly>
+                    <input type="text" class="spinner-input" id="activity-input3" placeholder="Activity 3" style="top: 45%; left: 45%;" readonly>
+                    <input type="text" class="spinner-input" id="activity-input4" placeholder="Activity 4" style="top: 33.5%; left: 40%;" readonly>                           
+                </div>
+
+                <!-- Activity Output Results -->
                 <div class="output">
                     <form id="activity-output">
                         <input type="text" id="activity-result" name="activity-result" readonly>
@@ -100,14 +113,19 @@
             </div>
 
             <!--Duraction Spinner-->
+
             <div id="duration-spinner">
                 <!-- Spinner segments -->
                 <div class="spinner-container">
+                    <!--<canvas id="spinner-d" width="352" height="352"></canvas>-->
                         <div class="spinner-segment red" data-duration="duration1"></div>
                         <div class="spinner-segment green" data-duration="duration2"></div>
                         <div class="spinner-segment blue" data-duration="duration3"></div>
                         <div class="spinner-segment yellow" data-duration="duration4"></div>
+                    <!--</canvas>-->  
                     </div>
+
+                    <!-- Activity Output Results -->
                     <div class="output">
                         <form id="duration-output">
                             <input type="text" id="duration-result" name="duration-result" readonly>

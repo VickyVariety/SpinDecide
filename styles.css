@@ -12,6 +12,9 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 25px #06b3b3, 0 0 5px #046969;  
 }
 
+h2 {
+  padding-top: 1em;
+}
 
 /* Styles the header including the navigation bar */
 header {
@@ -33,8 +36,7 @@ main {
   grid-template-columns: 9fr 2fr; /* Proportion between sidebar and main content */  
   gap: 1em; /* Space between grid items */
   padding: 1em; /* Padding around the main area */
-  margin: auto; /* Centers the grid */
-  overflow: auto;
+  margin: auto; /* Centers the grid */ 
 }
 
 /* Container holding both the sidebar and main content sections */
@@ -47,8 +49,18 @@ main {
 
 /* Sidebar styling, uses the grid area named 'sidebar' */
 .sidebar {
-  padding: 2em;
+  margin-left: 3em;
+  margin-top: -1em;
 }
+
+#activity-input, #duration-input {
+  background-color: #a3a2a2;
+  text-align: center;
+  height: 20em;
+  width: 15em;
+  border-radius: 6%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  
+  }
 
 /* Main content styling */
 .main-content {
@@ -69,11 +81,11 @@ main {
   display: flex;
   flex-direction: row; /* Stacks the spinners horizontally */
   justify-content: center; /* Center the spinners horizontally */
-  gap: 2em; /* Adds space between the spinners */
+  gap: 2em; /* Adds space between the spinners */  
 }
 
 .spinner-container {
-  margin: 0;
+  margin: 0;  
   width: 22em;
   height: 22em;
   transform: rotate(-135deg);
@@ -82,8 +94,42 @@ main {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+.inputs.overlay {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+
+.spinner-input {
+  position: absolute;  
+}
+
+#activity-input1 { 
+  transform: rotate(0deg);
+  text-align: center;
+  width: 8em;
+  text-transform: uppercase;
+}
+#activity-input2 { 
+  transform: rotate(90deg);
+  width: 8em;
+  text-transform: uppercase;
+}
+#activity-input3 { 
+  transform: rotate(180deg);
+  width: 8em;
+  text-transform: uppercase;
+}
+#activity-input4 { 
+  transform: rotate(270deg);
+  width: 8em;
+  text-transform: uppercase;
+}
+
 .spinner-segment {
-  position: absolute;
+  position: absolute;  
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -200,6 +246,9 @@ main {
 
 /* Styles the text input fields to remove borders, add rounded corners, and set dimensions */
 input[type="text"] {
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* text-transform: uppercase; */
+  font-weight: 600;
   border: none;
   border-radius: 1em;
   height: 2.2em;
@@ -238,8 +287,8 @@ input[type="text"]:focus {
 footer {
   font-size: 0.6em;
   text-align: center;
-  height: 0.3em;
-  margin-top: -3em;  
+  height: 0.3em;  
+  margin-top: -4em;  
 }
 
 /* Colors for each number box */
